@@ -6,7 +6,7 @@
 
 /* Global styles */
 body {
-  background-color: #eee;
+  background-color: #efefef;
   color: #3f3f3f;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 26px;
@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
 ul, li {
   list-style: none;
@@ -32,4 +33,56 @@ img {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.logo {
+  float: left;
+  width: 200px;
+}
+.left-nav {
+  float: left;
+}
+.right-nav {
+  float: right;
+}
+main {
+  overflow: hidden;
+}
+/* .main-content, .sidebar {
+  width: 100%;
+} */
+
+nav {
+  background-color: #FF6144;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .logo {
+    float: left;
+    width: 200px;
+  }
+  .navbar ul li {
+    display: inline-block;
+    padding: 10px 0 10px 15px;
+  }
+  .main-content {
+    float: left;
+    width: 75%;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+  
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  
 }
