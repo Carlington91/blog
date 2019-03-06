@@ -6,7 +6,7 @@
 
 /* Global styles */
 body {
-  background-color: #efefef;
+  background-color: #f5f5f5;
   color: #3f3f3f;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 26px;
@@ -49,8 +49,11 @@ img {
 }
 main {
   overflow: hidden;
-  padding: 30px 0;
+  padding: 0 0 30px 0;
   flex: 1;
+}
+main.home {
+  padding-top: 60px;
 }
 #footer {
   background: #333;
@@ -77,10 +80,21 @@ nav {
 
 .main-content, .sidebar {
   width: 100%;
+  position: relative;
+}
+.page-header {
+  text-align: center;
+  background-color: #fdfdfd;
+  margin: 0 0 20px;
+}
+.page-title {
+  padding: 20px 0;
+  text-align: center;
 }
 .content-wrap {
   margin: 0 0 30px;
   overflow: hidden;
+
 }
 .content-figure {
   float: left;
@@ -105,12 +119,35 @@ nav {
   margin-right: 5px;
 }
 .thumbnail {
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  border-radius: 50%; 
+}
+.form {
+  width: 100%;
+}
+
+/* Form */
+.form-group {
+  margin: 0 0 20px;
+} 
+.form-input {
+  border: 1px solid #ddd;
+  width: 100%;
+  padding: 10px;
+}
+.btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px 20px;
+  width: 100%;
+}
+.btn-info {
+  background-color: #FF6144;
+  color: #fff;
 }
 @media (min-width: 576px) {
-
+  
 }
 @media (min-width: 768px) {
   .logo {
@@ -121,22 +158,23 @@ nav {
     display: inline-block;
     padding: 0 15px;
   }
-  .main-content {
+  .page-header {
+    padding: 20px 0;
+    margin: 0 0 50px;
+    text-align: left;
+  }
+  .page-title {
+    text-align: left;
+    padding: 0;
+    }
+  .content {
     float: left;
-    width: 75%;
+    width: 93%;
   }
   .content-figure {
     width: 5%;
     margin: 0 10px 0 0;
     float: left;
-  }
-  .content{
-    float: left;
-    width: 93%;
-  }
-  .sidebar {
-    float: left;
-    width: 25%;
   }
   .widget {
     padding: 0 20px 20px;
@@ -145,9 +183,46 @@ nav {
     border-bottom: 1px solid #dedede;
     padding: 5px;
   }
+  /* .form {
+    width: 50%;
+  } */
+  .form {
+    width: 100%;
+    border: 1px solid #eaeaea;
+    padding: 40px 30px 20px;
+    background: #fff;
+  }
+  .form-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-30%,25%);
+    width: 100%;
+  }
+  .form-wrap .btn {
+    width: 40%;
+  }
 }
 @media (min-width: 992px) { 
-  
+  .main-content{
+    float: left;
+    width: 75%;
+    padding-right: 50px;
+  }
+  .sidebar {
+    float: left;
+    width: 25%;
+    height: 100vh;
+}
+  .page-title{
+    padding: 0;
+  }
+  .btn {
+    width: 40%;
+  }
+  .form-wrap {
+    width: 60%;
+  }
 }
 @media (min-width: 1200px) {
   
